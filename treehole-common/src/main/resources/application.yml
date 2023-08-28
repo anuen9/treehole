@@ -1,0 +1,12 @@
+# 字符集设置
+spring:
+  aop:
+    proxy-target-class: true
+server:
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true

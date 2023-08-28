@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: /swagger.html
+  packages-to-scan: com.cbb
+
+spring:
+  application:
+    name: treehole-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos服务地址
+      config:
+        server-addr: localhost:8848
+        file-extension: yml
