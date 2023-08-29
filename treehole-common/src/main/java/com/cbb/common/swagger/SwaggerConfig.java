@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 测试一下提交
+ * swagger3配置
  */
 
 @Configuration

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "swagger测试")
 @RestController
-@RequestMapping("/v1/api/test")
+@RequestMapping("/user")
 public class BasicController {
     @GetMapping("/getTest")
     @Operation(summary = "测试swagger是否可用")
