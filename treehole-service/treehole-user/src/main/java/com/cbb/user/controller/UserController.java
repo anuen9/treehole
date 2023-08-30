@@ -6,10 +6,8 @@ import com.cbb.user.service.IUserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.constraints.Email;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Tag(name = "用户相关API")
@@ -21,8 +19,12 @@ public class UserController {
 
     @Operation(summary = "用户获取验证码")
     @PostMapping("/code")
-    public ResultRecord sendCode(@RequestBody LoginDto loginDto) {
-        return userService.sendCode(loginDto);
+    public ResultRecord sendCode(@RequestParam String email) {
+        return userService.sendCode(email);
+    }
+
+    public ResultRecord login(@RequestBody LoginDto loginDto) {
+        return userService.login(loginDto);
     }
 }
 

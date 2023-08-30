@@ -16,14 +16,3 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yml
-  data:
-    redis:
-      host: localhost #redis地址
-      port: 6379
-      password: 123456
-      lettuce:
-        pool:
-          max-active: 10
-          max-idle: 10
-          min-idle: 1
-          time-between-eviction-runs: 10s

@@ -6,9 +6,9 @@ import lombok.Getter;
 public enum HttpStatus {
     SUCCESS(200, "操作成功"),
     NOT_FOUND(404, "查询不到"),
-    LOGIN_ERR(401, "用户名或密码错误"),
     AUTH_ERR(403, "没有访问权限"),
-    EMAIL_ERR(1, "邮箱错误"),
+    EMAIL_ERR(1, "请输入正确的邮箱地址"),
+    LOGIN_ERR(2, "验证码错误"),
     ;
 
     final int code;
